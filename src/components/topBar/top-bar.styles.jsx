@@ -14,6 +14,19 @@ const StyledTopBar = styled.div`
   background-color: ${props => (props.scroll === true ? 'white' : '')};
 `;
 
+const StyledTopBarNav = styled.nav`
+  display: flex;
+  margin-left: auto;
+
+  button {
+    padding: 0 15px;
+
+    &:first-of-type {
+      margin-right: 10px;
+    }
+  }
+`;
+
 const StyledBrand = styled.figure`
   display: flex;
   align-items: center;
@@ -77,4 +90,4 @@ const StyledBrand = styled.figure`
   }
 `;
 
-export { StyledTopBar, StyledBrand };
+export { StyledTopBar, StyledTopBarNav, StyledBrand };

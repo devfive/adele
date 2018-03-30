@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledTopBar, StyledBrand } from './top-bar.styles';
 
+import history from '../../modules/history';
+
+import { StyledTopBar, StyledTopBarNav, StyledBrand } from './top-bar.styles';
+import Button from '../button/button';
 import Logo from '../logo/logo';
 import Social from '../social/social';
 
@@ -21,6 +24,26 @@ const TopBar = props => (
         </a>
       </figcaption>
     </StyledBrand>
+    <StyledTopBarNav>
+      <Button
+        type="button"
+        label="Home"
+        action={() => {
+          window.scrollTo({ behavior: 'smooth', left: '0', top: '0' });
+          history.push('/');
+        }}
+        tab={1}
+      />
+      <Button
+        type="button"
+        label="Stats"
+        action={() => {
+          window.scrollTo({ behavior: 'smooth', left: '0', top: '0' });
+          history.push('/stats');
+        }}
+        tab={1}
+      />
+    </StyledTopBarNav>
     <Social
       networks={['twitter', 'facebook', 'linkedin']}
       url="https://www.uxpin.com/adele"

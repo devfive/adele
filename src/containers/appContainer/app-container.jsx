@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 import TableContainer from '../tableContainer/table-container';
 import HeaderContainer from '../headerContainer/header-container';
 import InfoContainer from '../infoContainer/info-container';
@@ -34,7 +36,14 @@ export default class App extends Component {
     return (
       <main>
         <HeaderContainer scroll={this.state.scroll} />
-        <TableContainer scroll={this.state.scroll} scrollUpdate={this.updateScroll} />
+        <Switch>
+          <Route exact path="/stats" render={() => <div>Stats placeholder</div>} />
+          <Route
+            render={() => {
+              return <TableContainer scroll={this.state.scroll} scrollUpdate={this.updateScroll} />;
+            }}
+          />
+        </Switch>
         <InfoContainer>
           <SectionHeader content="why adele?" id="adele-info" />
           <AdeleInfo />
