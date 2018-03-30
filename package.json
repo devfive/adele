@@ -48,6 +48,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-svg-inline": "^2.0.1",
+    "rxjs": "^5.5.8",
     "styled-components": "^2.1.2",
     "svg-inline-loader": "^0.8.0",
     "webpack": "^3.5.5"

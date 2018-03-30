@@ -1,9 +1,11 @@
+/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import TableContainer from '../tableContainer/table-container';
 import HeaderContainer from '../headerContainer/header-container';
 import InfoContainer from '../infoContainer/info-container';
+import WindowContainer from '../windowContainer/window-container';
 import AdeleInfo from '../../components/adeleInfo/adele-info';
 import SectionHeader from '../../components/sectionHeader/section-header';
 import UXPinPromo from '../../components/uxpinPromo/uxpin-promo';
@@ -19,10 +21,17 @@ export default class App extends Component {
     super();
     this.state = {
       scroll: false,
+      scrollTop: 0,
+      isScrolledTop: false,
     };
     this.updateScroll = this.updateScroll.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
+  /**
+   * TODO: refactor TableContainer to use scrollTop and isScrolledTop props or
+   * register window.scroll event listener directly there
+   */
   updateScroll(e) {
     /* This function updates the state representing
     ** position of the scroll which triggers changes in layout
@@ -32,15 +41,24 @@ export default class App extends Component {
     this.setState({ scroll: e });
   }
 
+  handleScroll(scrollTop) {
+    this.setState({
+      scrollTop,
+      isScrolledTop: scrollTop === 0,
+    });
+  }
+
   render() {
+    const { isScrolledTop, scroll } = this.state;
+
     return (
-      <main>
-        <HeaderContainer scroll={this.state.scroll} />
+      <WindowContainer onScroll={this.handleScroll}>
+        <HeaderContainer scroll={!isScrolledTop} />
         <Switch>
           <Route exact path="/stats" render={() => <div>Stats placeholder</div>} />
           <Route
             render={() => {
-              return <TableContainer scroll={this.state.scroll} scrollUpdate={this.updateScroll} />;
+              return <TableContainer scroll={scroll} scrollUpdate={this.updateScroll} />;
             }}
           />
         </Switch>
@@ -70,7 +88,7 @@ export default class App extends Component {
           </StyledTwoColumns>
         </InfoContainer>
         <Footer />
-      </main>
+      </WindowContainer>
     );
   }
 }
