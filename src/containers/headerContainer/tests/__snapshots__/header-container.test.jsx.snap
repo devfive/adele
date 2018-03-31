@@ -47,6 +47,22 @@ exports[`renders HeaderContainer correctly 1`] = `
   background-color: white;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.c3 button {
+  padding: 0 15px;
+}
+
+.c3 button:first-of-type {
+  margin-right: 10px;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -99,6 +115,7 @@ exports[`renders HeaderContainer correctly 1`] = `
 }
 
 .c2 figcaption a {
+  -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s ease-in;
@@ -116,129 +133,7 @@ exports[`renders HeaderContainer correctly 1`] = `
   border-bottom: 1px solid #777777;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 6px;
-}
-
-.c3 [title~='facebook'] span {
-  padding: 0 0 1px 2px;
-}
-
-.c3 [title~='twitter'] span {
-  padding: 0 0 0 2px;
-}
-
-.c3 [title~='linkedin'] span {
-  padding: 0 0 0 2px;
-}
-
-.c3 [title~='github'] span {
-  padding: 0 0 1px 2px;
-}
-
-.c3 [title~='github'] span svg {
-  width: 20px;
-  margin-left: -7px;
-}
-
 .c4 {
-  display: inline-block;
-  margin-left: 6px;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background: none;
-  border: 1px solid #006cff;
-  border-radius: 100%;
-  -webkit-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
-  cursor: pointer;
-  outline: none;
-}
-
-.c5 span {
-  position: relative;
-  display: block;
-  width: 14px;
-  height: 14px;
-}
-
-.c5 svg {
-  display: block;
-  -webkit-transition: fill 0.3s ease-in;
-  transition: fill 0.3s ease-in;
-  width: 10px;
-  height: 14px;
-}
-
-.c5:hover,
-.c5:focus {
-  background-color: #006cff;
-}
-
-.c5:hover svg,
-.c5:focus svg {
-  -webkit-fill: white;
-  fill: white;
-}
-
-.c6:focus {
-  outline: 0;
-}
-
-.c6 > svg {
-  width: 14px;
-  height: 100%;
-  -webkit-fill: #006cff;
-  fill: #006cff;
-  cursor: pointer;
-}
-
-.c6 > svg:hover {
-  -webkit-fill: #006cff;
-  fill: #006cff;
-}
-
-.c7:focus {
-  outline: 0;
-}
-
-.c7 > svg {
-  width: 13px;
-  height: 100%;
-  -webkit-fill: #006cff;
-  fill: #006cff;
-  cursor: pointer;
-}
-
-.c7 > svg:hover {
-  -webkit-fill: #006cff;
-  fill: #006cff;
-}
-
-.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,29 +158,147 @@ exports[`renders HeaderContainer correctly 1`] = `
   font-size: 16px;
   font-weight: 300;
   color: white;
+  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all ease-in 0.1s;
   transition: all ease-in 0.1s;
 }
 
-.c10:hover {
+.c4:hover {
   background-color: #3389ff;
   border-color: #3389ff;
   box-shadow: 4px 4px 20px rgba(179,211,255,0.6);
 }
 
-.c10:active {
+.c4:active {
   background-color: #0061e6;
   box-shadow: 'none';
 }
 
-.c10:focus {
+.c4:focus {
   outline: none;
   background-color: #3389ff;
 }
 
-.c11 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.c5 [title~='facebook'] span {
+  padding: 0 0 1px 2px;
+}
+
+.c5 [title~='twitter'] span {
+  padding: 0 0 0 2px;
+}
+
+.c5 [title~='linkedin'] span {
+  padding: 0 0 0 2px;
+}
+
+.c5 [title~='github'] span {
+  padding: 0 0 1px 2px;
+}
+
+.c5 [title~='github'] span svg {
+  width: 20px;
+  margin-left: -7px;
+}
+
+.c6 {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 1px solid #006cff;
+  border-radius: 100%;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+  outline: none;
+}
+
+.c7 span {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.c7 svg {
+  display: block;
+  -webkit-transition: fill 0.3s ease-in;
+  transition: fill 0.3s ease-in;
+  width: 10px;
+  height: 14px;
+}
+
+.c7:hover,
+.c7:focus {
+  background-color: #006cff;
+}
+
+.c7:hover svg,
+.c7:focus svg {
+  fill: white;
+}
+
+.c8:focus {
+  outline: 0;
+}
+
+.c8 > svg {
+  width: 14px;
+  height: 100%;
+  fill: #006cff;
+  cursor: pointer;
+}
+
+.c8 > svg:hover {
+  fill: #006cff;
+}
+
+.c9:focus {
+  outline: 0;
+}
+
+.c9 > svg {
+  width: 13px;
+  height: 100%;
+  fill: #006cff;
+  cursor: pointer;
+}
+
+.c9 > svg:hover {
+  fill: #006cff;
+}
+
+.c12 {
   position: relative;
   outline: none;
   border: none;
@@ -297,22 +310,23 @@ exports[`renders HeaderContainer correctly 1`] = `
   cursor: pointer;
 }
 
-.c11:hover {
+.c12:hover {
+  -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
 }
 
-.c11:focus {
+.c12:focus {
   color: #006cff;
 }
 
-.c8 {
+.c10 {
   font-family: proxima-nova,Proxima Nova,Helvetica Neue,Helvetica,Arial,sans-serif;
   margin: 150px auto 90px auto;
 }
 
-.c8 h1 {
+.c10 h1 {
   display: block;
   position: relative;
   margin: 0;
@@ -325,7 +339,7 @@ exports[`renders HeaderContainer correctly 1`] = `
   text-shadow: 10px 10px 20px rgba(0,0,55,0.07);
 }
 
-.c8 span {
+.c10 span {
   display: block;
   position: relative;
   width: 500px;
@@ -338,7 +352,7 @@ exports[`renders HeaderContainer correctly 1`] = `
   text-shadow: none;
 }
 
-.c9 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -354,7 +368,7 @@ exports[`renders HeaderContainer correctly 1`] = `
   margin-top: 40px;
 }
 
-.c9 > button:first-child {
+.c11 > button:first-child {
   margin-right: 40px;
 }
 
@@ -426,6 +440,56 @@ exports[`renders HeaderContainer correctly 1`] = `
                 </figcaption>
               </figure>
             </styled.figure>
+            <styled.nav>
+              <nav
+                className="c3"
+              >
+                <Button
+                  accent={false}
+                  action={[Function]}
+                  label="Home"
+                  tab={1}
+                  targetBlank={false}
+                  type="button"
+                >
+                  <styled.button
+                    accent={false}
+                    onClick={[Function]}
+                    tabIndex={1}
+                  >
+                    <button
+                      className="c4"
+                      onClick={[Function]}
+                      tabIndex={1}
+                    >
+                      Home
+                    </button>
+                  </styled.button>
+                </Button>
+                <Button
+                  accent={false}
+                  action={[Function]}
+                  label="Stats"
+                  tab={1}
+                  targetBlank={false}
+                  type="button"
+                >
+                  <styled.button
+                    accent={false}
+                    onClick={[Function]}
+                    tabIndex={1}
+                  >
+                    <button
+                      className="c4"
+                      onClick={[Function]}
+                      tabIndex={1}
+                    >
+                      Stats
+                    </button>
+                  </styled.button>
+                </Button>
+              </nav>
+            </styled.nav>
             <Social
               networks={
                 Array [
@@ -439,20 +503,20 @@ exports[`renders HeaderContainer correctly 1`] = `
             >
               <styled.ul>
                 <ul
-                  className="c3"
+                  className="c5"
                 >
                   <styled.li
                     title="github"
                   >
                     <li
-                      className="c4"
+                      className="c6"
                       title="github"
                     >
                       <styled.span
                         tabIndex={1}
                       >
                         <span
-                          className="c5"
+                          className="c7"
                           tabIndex={1}
                         >
                           <a
@@ -476,7 +540,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                                 svg="test-file-stub"
                               >
                                 <SVGInline
-                                  className="c6"
+                                  className="c8"
                                   classSuffix="-svg"
                                   cleanup={Array []}
                                   cleanupExceptions={Array []}
@@ -489,7 +553,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                                   svg="test-file-stub"
                                 >
                                   <span
-                                    className="SVGInline c6"
+                                    className="SVGInline c8"
                                     color="#006cff"
                                     dangerouslySetInnerHTML={
                                       Object {
@@ -514,7 +578,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                     title="twitter social share"
                   >
                     <li
-                      className="c4"
+                      className="c6"
                       title="twitter social share"
                     >
                       <styled.span
@@ -522,7 +586,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                         tabIndex={1}
                       >
                         <span
-                          className="c5"
+                          className="c7"
                           onClick={[Function]}
                           tabIndex={1}
                         >
@@ -543,7 +607,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                               svg="test-file-stub"
                             >
                               <SVGInline
-                                className="c7"
+                                className="c9"
                                 classSuffix="-svg"
                                 cleanup={Array []}
                                 cleanupExceptions={Array []}
@@ -556,7 +620,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                                 svg="test-file-stub"
                               >
                                 <span
-                                  className="SVGInline c7"
+                                  className="SVGInline c9"
                                   color="#006cff"
                                   dangerouslySetInnerHTML={
                                     Object {
@@ -580,7 +644,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                     title="facebook social share"
                   >
                     <li
-                      className="c4"
+                      className="c6"
                       title="facebook social share"
                     >
                       <styled.span
@@ -588,7 +652,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                         tabIndex={1}
                       >
                         <span
-                          className="c5"
+                          className="c7"
                           onClick={[Function]}
                           tabIndex={1}
                         >
@@ -609,7 +673,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                               svg="test-file-stub"
                             >
                               <SVGInline
-                                className="c7"
+                                className="c9"
                                 classSuffix="-svg"
                                 cleanup={Array []}
                                 cleanupExceptions={Array []}
@@ -622,7 +686,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                                 svg="test-file-stub"
                               >
                                 <span
-                                  className="SVGInline c7"
+                                  className="SVGInline c9"
                                   color="#006cff"
                                   dangerouslySetInnerHTML={
                                     Object {
@@ -646,7 +710,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                     title="linkedin social share"
                   >
                     <li
-                      className="c4"
+                      className="c6"
                       title="linkedin social share"
                     >
                       <styled.span
@@ -654,7 +718,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                         tabIndex={1}
                       >
                         <span
-                          className="c5"
+                          className="c7"
                           onClick={[Function]}
                           tabIndex={1}
                         >
@@ -675,7 +739,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                               svg="test-file-stub"
                             >
                               <SVGInline
-                                className="c7"
+                                className="c9"
                                 classSuffix="-svg"
                                 cleanup={Array []}
                                 cleanupExceptions={Array []}
@@ -688,7 +752,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                                 svg="test-file-stub"
                               >
                                 <span
-                                  className="SVGInline c7"
+                                  className="SVGInline c9"
                                   color="#006cff"
                                   dangerouslySetInnerHTML={
                                     Object {
@@ -720,7 +784,7 @@ exports[`renders HeaderContainer correctly 1`] = `
           scroll={true}
         >
           <div
-            className="c8"
+            className="c10"
           >
             <h1>
               Adele
@@ -730,9 +794,10 @@ exports[`renders HeaderContainer correctly 1`] = `
             </span>
             <styled.section>
               <section
-                className="c9"
+                className="c11"
               >
                 <Button
+                  accent={false}
                   action={[Function]}
                   label="Start Exploring Systems"
                   tab={1}
@@ -740,11 +805,12 @@ exports[`renders HeaderContainer correctly 1`] = `
                   type="button"
                 >
                   <styled.button
+                    accent={false}
                     onClick={[Function]}
                     tabIndex={1}
                   >
                     <button
-                      className="c10"
+                      className="c4"
                       onClick={[Function]}
                       tabIndex={1}
                     >
@@ -762,7 +828,7 @@ exports[`renders HeaderContainer correctly 1`] = `
                     tabIndex={1}
                   >
                     <button
-                      className="c11"
+                      className="c12"
                       onClick={[Function]}
                       tabIndex={1}
                     >

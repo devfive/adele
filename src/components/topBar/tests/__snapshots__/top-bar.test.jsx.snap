@@ -23,6 +23,22 @@ exports[`renders TopBar with scroll active correctly 1`] = `
   background-color: white;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.c2 button {
+  padding: 0 15px;
+}
+
+.c2 button:first-of-type {
+  margin-right: 10px;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -75,6 +91,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
 }
 
 .c1 figcaption a {
+  -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s ease-in;
@@ -92,7 +109,55 @@ exports[`renders TopBar with scroll active correctly 1`] = `
   border-bottom: 1px solid #777777;
 }
 
-.c2 {
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+  min-height: 40px;
+  width: 100%;
+  max-width: 200px;
+  background-color: #006cff;
+  border-radius: 25px;
+  border: 1px solid #006cff;
+  font-family: proxima-nova,Proxima Nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all ease-in 0.1s;
+  transition: all ease-in 0.1s;
+}
+
+.c3:hover {
+  background-color: #3389ff;
+  border-color: #3389ff;
+  box-shadow: 4px 4px 20px rgba(179,211,255,0.6);
+}
+
+.c3:active {
+  background-color: #0061e6;
+  box-shadow: 'none';
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #3389ff;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,33 +169,33 @@ exports[`renders TopBar with scroll active correctly 1`] = `
   margin-right: 6px;
 }
 
-.c2 [title~='facebook'] span {
+.c4 [title~='facebook'] span {
   padding: 0 0 1px 2px;
 }
 
-.c2 [title~='twitter'] span {
+.c4 [title~='twitter'] span {
   padding: 0 0 0 2px;
 }
 
-.c2 [title~='linkedin'] span {
+.c4 [title~='linkedin'] span {
   padding: 0 0 0 2px;
 }
 
-.c2 [title~='github'] span {
+.c4 [title~='github'] span {
   padding: 0 0 1px 2px;
 }
 
-.c2 [title~='github'] span svg {
+.c4 [title~='github'] span svg {
   width: 20px;
   margin-left: -7px;
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   margin-left: 6px;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,14 +219,14 @@ exports[`renders TopBar with scroll active correctly 1`] = `
   outline: none;
 }
 
-.c4 span {
+.c6 span {
   position: relative;
   display: block;
   width: 14px;
   height: 14px;
 }
 
-.c4 svg {
+.c6 svg {
   display: block;
   -webkit-transition: fill 0.3s ease-in;
   transition: fill 0.3s ease-in;
@@ -169,48 +234,43 @@ exports[`renders TopBar with scroll active correctly 1`] = `
   height: 14px;
 }
 
-.c4:hover,
-.c4:focus {
+.c6:hover,
+.c6:focus {
   background-color: #006cff;
 }
 
-.c4:hover svg,
-.c4:focus svg {
-  -webkit-fill: white;
+.c6:hover svg,
+.c6:focus svg {
   fill: white;
 }
 
-.c5:focus {
+.c7:focus {
   outline: 0;
 }
 
-.c5 > svg {
+.c7 > svg {
   width: 14px;
   height: 100%;
-  -webkit-fill: #006cff;
   fill: #006cff;
   cursor: pointer;
 }
 
-.c5 > svg:hover {
-  -webkit-fill: #006cff;
+.c7 > svg:hover {
   fill: #006cff;
 }
 
-.c6:focus {
+.c8:focus {
   outline: 0;
 }
 
-.c6 > svg {
+.c8 > svg {
   width: 13px;
   height: 100%;
-  -webkit-fill: #006cff;
   fill: #006cff;
   cursor: pointer;
 }
 
-.c6 > svg:hover {
-  -webkit-fill: #006cff;
+.c8 > svg:hover {
   fill: #006cff;
 }
 
@@ -272,6 +332,56 @@ exports[`renders TopBar with scroll active correctly 1`] = `
           </figcaption>
         </figure>
       </styled.figure>
+      <styled.nav>
+        <nav
+          className="c2"
+        >
+          <Button
+            accent={false}
+            action={[Function]}
+            label="Home"
+            tab={1}
+            targetBlank={false}
+            type="button"
+          >
+            <styled.button
+              accent={false}
+              onClick={[Function]}
+              tabIndex={1}
+            >
+              <button
+                className="c3"
+                onClick={[Function]}
+                tabIndex={1}
+              >
+                Home
+              </button>
+            </styled.button>
+          </Button>
+          <Button
+            accent={false}
+            action={[Function]}
+            label="Stats"
+            tab={1}
+            targetBlank={false}
+            type="button"
+          >
+            <styled.button
+              accent={false}
+              onClick={[Function]}
+              tabIndex={1}
+            >
+              <button
+                className="c3"
+                onClick={[Function]}
+                tabIndex={1}
+              >
+                Stats
+              </button>
+            </styled.button>
+          </Button>
+        </nav>
+      </styled.nav>
       <Social
         networks={
           Array [
@@ -285,20 +395,20 @@ exports[`renders TopBar with scroll active correctly 1`] = `
       >
         <styled.ul>
           <ul
-            className="c2"
+            className="c4"
           >
             <styled.li
               title="github"
             >
               <li
-                className="c3"
+                className="c5"
                 title="github"
               >
                 <styled.span
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     tabIndex={1}
                   >
                     <a
@@ -322,7 +432,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <SVGInline
-                            className="c5"
+                            className="c7"
                             classSuffix="-svg"
                             cleanup={Array []}
                             cleanupExceptions={Array []}
@@ -335,7 +445,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                             svg="test-file-stub"
                           >
                             <span
-                              className="SVGInline c5"
+                              className="SVGInline c7"
                               color="#006cff"
                               dangerouslySetInnerHTML={
                                 Object {
@@ -360,7 +470,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
               title="twitter social share"
             >
               <li
-                className="c3"
+                className="c5"
                 title="twitter social share"
               >
                 <styled.span
@@ -368,7 +478,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     onClick={[Function]}
                     tabIndex={1}
                   >
@@ -389,7 +499,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                         svg="test-file-stub"
                       >
                         <SVGInline
-                          className="c6"
+                          className="c8"
                           classSuffix="-svg"
                           cleanup={Array []}
                           cleanupExceptions={Array []}
@@ -402,7 +512,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <span
-                            className="SVGInline c6"
+                            className="SVGInline c8"
                             color="#006cff"
                             dangerouslySetInnerHTML={
                               Object {
@@ -426,7 +536,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
               title="facebook social share"
             >
               <li
-                className="c3"
+                className="c5"
                 title="facebook social share"
               >
                 <styled.span
@@ -434,7 +544,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     onClick={[Function]}
                     tabIndex={1}
                   >
@@ -455,7 +565,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                         svg="test-file-stub"
                       >
                         <SVGInline
-                          className="c6"
+                          className="c8"
                           classSuffix="-svg"
                           cleanup={Array []}
                           cleanupExceptions={Array []}
@@ -468,7 +578,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <span
-                            className="SVGInline c6"
+                            className="SVGInline c8"
                             color="#006cff"
                             dangerouslySetInnerHTML={
                               Object {
@@ -492,7 +602,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
               title="linkedin social share"
             >
               <li
-                className="c3"
+                className="c5"
                 title="linkedin social share"
               >
                 <styled.span
@@ -500,7 +610,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     onClick={[Function]}
                     tabIndex={1}
                   >
@@ -521,7 +631,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                         svg="test-file-stub"
                       >
                         <SVGInline
-                          className="c6"
+                          className="c8"
                           classSuffix="-svg"
                           cleanup={Array []}
                           cleanupExceptions={Array []}
@@ -534,7 +644,7 @@ exports[`renders TopBar with scroll active correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <span
-                            className="SVGInline c6"
+                            className="SVGInline c8"
                             color="#006cff"
                             dangerouslySetInnerHTML={
                               Object {
@@ -581,6 +691,22 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
   margin-top: 0;
   width: 90%;
   height: 80px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.c2 button {
+  padding: 0 15px;
+}
+
+.c2 button:first-of-type {
+  margin-right: 10px;
 }
 
 .c1 {
@@ -635,6 +761,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
 }
 
 .c1 figcaption a {
+  -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s ease-in;
@@ -652,7 +779,55 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
   border-bottom: 1px solid #777777;
 }
 
-.c2 {
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+  min-height: 40px;
+  width: 100%;
+  max-width: 200px;
+  background-color: #006cff;
+  border-radius: 25px;
+  border: 1px solid #006cff;
+  font-family: proxima-nova,Proxima Nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all ease-in 0.1s;
+  transition: all ease-in 0.1s;
+}
+
+.c3:hover {
+  background-color: #3389ff;
+  border-color: #3389ff;
+  box-shadow: 4px 4px 20px rgba(179,211,255,0.6);
+}
+
+.c3:active {
+  background-color: #0061e6;
+  box-shadow: 'none';
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #3389ff;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -664,33 +839,33 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
   margin-right: 6px;
 }
 
-.c2 [title~='facebook'] span {
+.c4 [title~='facebook'] span {
   padding: 0 0 1px 2px;
 }
 
-.c2 [title~='twitter'] span {
+.c4 [title~='twitter'] span {
   padding: 0 0 0 2px;
 }
 
-.c2 [title~='linkedin'] span {
+.c4 [title~='linkedin'] span {
   padding: 0 0 0 2px;
 }
 
-.c2 [title~='github'] span {
+.c4 [title~='github'] span {
   padding: 0 0 1px 2px;
 }
 
-.c2 [title~='github'] span svg {
+.c4 [title~='github'] span svg {
   width: 20px;
   margin-left: -7px;
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   margin-left: 6px;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -714,14 +889,14 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
   outline: none;
 }
 
-.c4 span {
+.c6 span {
   position: relative;
   display: block;
   width: 14px;
   height: 14px;
 }
 
-.c4 svg {
+.c6 svg {
   display: block;
   -webkit-transition: fill 0.3s ease-in;
   transition: fill 0.3s ease-in;
@@ -729,48 +904,43 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
   height: 14px;
 }
 
-.c4:hover,
-.c4:focus {
+.c6:hover,
+.c6:focus {
   background-color: #006cff;
 }
 
-.c4:hover svg,
-.c4:focus svg {
-  -webkit-fill: white;
+.c6:hover svg,
+.c6:focus svg {
   fill: white;
 }
 
-.c5:focus {
+.c7:focus {
   outline: 0;
 }
 
-.c5 > svg {
+.c7 > svg {
   width: 14px;
   height: 100%;
-  -webkit-fill: #006cff;
   fill: #006cff;
   cursor: pointer;
 }
 
-.c5 > svg:hover {
-  -webkit-fill: #006cff;
+.c7 > svg:hover {
   fill: #006cff;
 }
 
-.c6:focus {
+.c8:focus {
   outline: 0;
 }
 
-.c6 > svg {
+.c8 > svg {
   width: 13px;
   height: 100%;
-  -webkit-fill: #006cff;
   fill: #006cff;
   cursor: pointer;
 }
 
-.c6 > svg:hover {
-  -webkit-fill: #006cff;
+.c8 > svg:hover {
   fill: #006cff;
 }
 
@@ -832,6 +1002,56 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
           </figcaption>
         </figure>
       </styled.figure>
+      <styled.nav>
+        <nav
+          className="c2"
+        >
+          <Button
+            accent={false}
+            action={[Function]}
+            label="Home"
+            tab={1}
+            targetBlank={false}
+            type="button"
+          >
+            <styled.button
+              accent={false}
+              onClick={[Function]}
+              tabIndex={1}
+            >
+              <button
+                className="c3"
+                onClick={[Function]}
+                tabIndex={1}
+              >
+                Home
+              </button>
+            </styled.button>
+          </Button>
+          <Button
+            accent={false}
+            action={[Function]}
+            label="Stats"
+            tab={1}
+            targetBlank={false}
+            type="button"
+          >
+            <styled.button
+              accent={false}
+              onClick={[Function]}
+              tabIndex={1}
+            >
+              <button
+                className="c3"
+                onClick={[Function]}
+                tabIndex={1}
+              >
+                Stats
+              </button>
+            </styled.button>
+          </Button>
+        </nav>
+      </styled.nav>
       <Social
         networks={
           Array [
@@ -845,20 +1065,20 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
       >
         <styled.ul>
           <ul
-            className="c2"
+            className="c4"
           >
             <styled.li
               title="github"
             >
               <li
-                className="c3"
+                className="c5"
                 title="github"
               >
                 <styled.span
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     tabIndex={1}
                   >
                     <a
@@ -882,7 +1102,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <SVGInline
-                            className="c5"
+                            className="c7"
                             classSuffix="-svg"
                             cleanup={Array []}
                             cleanupExceptions={Array []}
@@ -895,7 +1115,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                             svg="test-file-stub"
                           >
                             <span
-                              className="SVGInline c5"
+                              className="SVGInline c7"
                               color="#006cff"
                               dangerouslySetInnerHTML={
                                 Object {
@@ -920,7 +1140,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
               title="twitter social share"
             >
               <li
-                className="c3"
+                className="c5"
                 title="twitter social share"
               >
                 <styled.span
@@ -928,7 +1148,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     onClick={[Function]}
                     tabIndex={1}
                   >
@@ -949,7 +1169,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                         svg="test-file-stub"
                       >
                         <SVGInline
-                          className="c6"
+                          className="c8"
                           classSuffix="-svg"
                           cleanup={Array []}
                           cleanupExceptions={Array []}
@@ -962,7 +1182,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <span
-                            className="SVGInline c6"
+                            className="SVGInline c8"
                             color="#006cff"
                             dangerouslySetInnerHTML={
                               Object {
@@ -986,7 +1206,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
               title="facebook social share"
             >
               <li
-                className="c3"
+                className="c5"
                 title="facebook social share"
               >
                 <styled.span
@@ -994,7 +1214,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     onClick={[Function]}
                     tabIndex={1}
                   >
@@ -1015,7 +1235,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                         svg="test-file-stub"
                       >
                         <SVGInline
-                          className="c6"
+                          className="c8"
                           classSuffix="-svg"
                           cleanup={Array []}
                           cleanupExceptions={Array []}
@@ -1028,7 +1248,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <span
-                            className="SVGInline c6"
+                            className="SVGInline c8"
                             color="#006cff"
                             dangerouslySetInnerHTML={
                               Object {
@@ -1052,7 +1272,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
               title="linkedin social share"
             >
               <li
-                className="c3"
+                className="c5"
                 title="linkedin social share"
               >
                 <styled.span
@@ -1060,7 +1280,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                   tabIndex={1}
                 >
                   <span
-                    className="c4"
+                    className="c6"
                     onClick={[Function]}
                     tabIndex={1}
                   >
@@ -1081,7 +1301,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                         svg="test-file-stub"
                       >
                         <SVGInline
-                          className="c6"
+                          className="c8"
                           classSuffix="-svg"
                           cleanup={Array []}
                           cleanupExceptions={Array []}
@@ -1094,7 +1314,7 @@ exports[`renders TopBar with scroll inactive correctly 1`] = `
                           svg="test-file-stub"
                         >
                           <span
-                            className="SVGInline c6"
+                            className="SVGInline c8"
                             color="#006cff"
                             dangerouslySetInnerHTML={
                               Object {

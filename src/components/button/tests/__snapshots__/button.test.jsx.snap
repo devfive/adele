@@ -26,6 +26,7 @@ exports[`renders filled Button with button markup correctly 1`] = `
   font-size: 16px;
   font-weight: 300;
   color: white;
+  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all ease-in 0.1s;
@@ -49,6 +50,7 @@ exports[`renders filled Button with button markup correctly 1`] = `
 }
 
 <Button
+  accent={false}
   action={[Function]}
   label="Start Exploring Systems"
   tab={1}
@@ -56,6 +58,7 @@ exports[`renders filled Button with button markup correctly 1`] = `
   type="button"
 >
   <styled.button
+    accent={false}
     onClick={[Function]}
     tabIndex={1}
   >
