@@ -6,19 +6,19 @@ import { StyledLink, StyledButton } from './button.styles';
 const Button = (props) => {
   if (props.type === 'link' && props.targetBlank === true) {
     return (
-      <StyledLink href={props.action} target="_blank" tabIndex={props.tab}>
+      <StyledLink href={props.action} target="_blank" tabIndex={props.tab} accent={props.accent}>
         {props.label}
       </StyledLink>
     );
   } else if (props.type === 'link' && props.targetBlank === false) {
     return (
-      <StyledLink href={props.action} tabIndex={props.tab}>
+      <StyledLink href={props.action} tabIndex={props.tab} accent={props.accent}>
         {props.label}
       </StyledLink>
     );
   } else if (props.type === 'button') {
     return (
-      <StyledButton onClick={props.action} tabIndex={props.tab}>
+      <StyledButton onClick={props.action} tabIndex={props.tab} accent={props.accent}>
         {props.label}
       </StyledButton>
     );
@@ -28,6 +28,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   /* eslint-disable react/forbid-prop-types */
+  accent: PropTypes.bool,
   action: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['link', 'button']).isRequired,
@@ -36,6 +37,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  accent: false,
   targetBlank: false,
   tab: 0,
 };

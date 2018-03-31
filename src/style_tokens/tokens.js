@@ -12,7 +12,9 @@ const tokens = {
     "grayDark10": "#222222",
     "grayDark20": "#1e1e1e",
     "black": "#131313",
-    "red": "#EF0A61"
+    "red": "#EF0A61",
+    "redLight10": "#f02270",
+    "redDark10": "#ef0a61"
   },
   "sizes": {
     "xs": "7px",
@@ -216,6 +218,17 @@ export const uxpinPromo = {
   }
 }
 
+export const charts = {
+  typography: {
+    fontFamily: typography.fontFamily,
+    sizeHeader: typography.header2,
+    sizeText: typography.regularText,
+    weight: typography.regular,
+    colorHeader: tokens.colors.silver,
+    colorText: tokens.colors.grayLight10,
+  }
+}
+
 export const button = {
   border: {
     radius: tokens.border.radiusMax,
@@ -227,9 +240,20 @@ export const button = {
     weight: typography.regular,
     color: tokens.colors.blue,
   },
-  color: tokens.colors.blue,
-  hover: tokens.colors.blueLight10,
-  active: tokens.colors.blueDark10,
+  colors: {
+    default: {
+      backgroundColor: tokens.colors.blue,
+      color: 'white',
+      hover: tokens.colors.blueLight10,
+      active: tokens.colors.blueDark10,
+    },
+    accent: {
+      backgroundColor: tokens.colors.red,
+      color: 'white',
+      hover: tokens.colors.redLight10,
+      active: tokens.colors.redDark10,
+    }
+  }
 }
 
 export const navLink = {

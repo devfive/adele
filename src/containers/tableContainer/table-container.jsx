@@ -34,6 +34,7 @@ export default class TableContainer extends Component {
       filteredCats: false,
       heights: [],
     };
+    this.removeEventListener = () => null;
     this.filterTable = this.filterTable.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.sortTable = this.sortTable.bind(this);
@@ -142,7 +143,7 @@ export default class TableContainer extends Component {
       }
     };
 
-    window.addEventListener('scroll', () => {
+    const scrollHandler = () => {
       lastKnownScrollPosition = window.scrollY;
 
       if (!ticking) {
@@ -153,7 +154,12 @@ export default class TableContainer extends Component {
 
         ticking = true;
       }
-    });
+    };
+
+    window.addEventListener('scroll', scrollHandler);
+    this.removeEventListener = () => {
+      window.removeEventListener('scroll', scrollHandler);
+    };
 
     /* Fix for correct position of the header */
 
@@ -175,6 +181,10 @@ export default class TableContainer extends Component {
 
   componentDidUpdate() {
     this.setFixedCellsWidths(this.state.systemsCat);
+  }
+
+  componentWillUnmount() {
+    this.removeEventListener();
   }
 
   setFixedCellsHeights(systems) {

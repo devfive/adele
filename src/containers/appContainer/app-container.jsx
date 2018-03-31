@@ -6,6 +6,7 @@ import TableContainer from '../tableContainer/table-container';
 import HeaderContainer from '../headerContainer/header-container';
 import InfoContainer from '../infoContainer/info-container';
 import WindowContainer from '../windowContainer/window-container';
+import StatsContainer from '../statsContainer/stats-container';
 import AdeleInfo from '../../components/adeleInfo/adele-info';
 import SectionHeader from '../../components/sectionHeader/section-header';
 import UXPinPromo from '../../components/uxpinPromo/uxpin-promo';
@@ -21,7 +22,6 @@ export default class App extends Component {
     super();
     this.state = {
       scroll: false,
-      scrollTop: 0,
       isScrolledTop: false,
     };
     this.updateScroll = this.updateScroll.bind(this);
@@ -29,7 +29,7 @@ export default class App extends Component {
   }
 
   /**
-   * TODO: refactor TableContainer to use scrollTop and isScrolledTop props or
+   * TODO: refactor TableContainer to use isScrolledTop prop or
    * register window.scroll event listener directly there
    */
   updateScroll(e) {
@@ -42,8 +42,13 @@ export default class App extends Component {
   }
 
   handleScroll(scrollTop) {
+    const isScrolledTop = scrollTop === 0;
+
+    if (isScrolledTop === this.state.isScrolledTop) {
+      return;
+    }
+
     this.setState({
-      scrollTop,
       isScrolledTop: scrollTop === 0,
     });
   }
@@ -55,7 +60,7 @@ export default class App extends Component {
       <WindowContainer onScroll={this.handleScroll}>
         <HeaderContainer scroll={!isScrolledTop} />
         <Switch>
-          <Route exact path="/stats" render={() => <div>Stats placeholder</div>} />
+          <Route path="/stats" component={StatsContainer} />
           <Route
             render={() => {
               return <TableContainer scroll={scroll} scrollUpdate={this.updateScroll} />;
